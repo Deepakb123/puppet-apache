@@ -28,8 +28,12 @@
 # --------
 #
 # @example
-#    class { 'apache':
-#      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
+    class apache {
+class { 'apache::install': } ->
+class { 'apache::service': }
+}
+
+
 #    }
 #
 # Authors
@@ -42,7 +46,3 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class apache {
-
-
-}
